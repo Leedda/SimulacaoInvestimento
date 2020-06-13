@@ -9,12 +9,12 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/java/automacao/Simulator.feature", // feature que ser· rodada atravÈs desse Runner
+		features = "src/test/java/automacao/Simulador.feature", // feature que ser√° rodada atrav√©s desse Runner
 		glue = "automacao", // caminho para encontrar os arquivos de steps correspondentes
-		tags = {"@funcionais"}, // executa os testes que est„o marcados com essa tag
+		tags = {"@funcionais"}, // executa os testes que est√£o marcados com essa tag
 		plugin =  {"pretty", "html:target/reports/report-html", "json:target/reports/report-json/report.json"},
 		monochrome = true,
-		snippets = SnippetType.UNDERSCORE, // formato que gera os passos do cen·rio quando ainda n„o existe
+		snippets = SnippetType.UNDERSCORE, // formato que gera os passos do cen√°rio quando ainda n√£o existe
 		dryRun = false,
 		strict = false
 		)
