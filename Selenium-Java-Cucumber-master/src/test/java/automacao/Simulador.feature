@@ -11,9 +11,9 @@ Feature: Simula Investimentos
     Then Eu visualizo uma tabela de valores e tempo de investimento "<texto>"
 
     Examples: 
-      | valorAplicar | valorInvestir | tempo    | texto                          | 
-      | 20.00        |   2.802,00    |  112     | Em 112 meses você terá guardado   |
-      | 20.00        |   3.174,00    |  124     | Em 124 meses você terá guardado   |
-      | 20.00        |   3.564,00    |  136     | Em 136 meses você terá guardado   |
-      | 20.00        |   3.971,00    |  148     | Em 148 meses você terá guardado   |
-      
+      | valorAplicar | valorInvestir | tempo    | texto                             | 
+      | 20.00        |   2.802,00    |  112     | Em 112 meses vocÃª terÃ¡ guardado   |
+      | 20.00        |   3.174,00    |  124     | Em 124 meses vocÃª terÃ¡ guardado   |
+      | 20.00        |   3.564,00    |  136     | Em 136 meses vocÃª terÃ¡ guardado   |
+      | 20.00        |   3.971,00    |  148     | Em 148 meses vocÃª terÃ¡ guardado   |
+      | 19.99        |   3.971,00    |  148     | Valor mÃ­nimo de 20.00             |
