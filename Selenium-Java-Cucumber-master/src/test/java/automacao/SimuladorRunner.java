@@ -1,4 +1,5 @@
-package br.com.automacao.SimuladorTest;
+package automacao;
+
 
 import org.junit.runner.RunWith;
 
@@ -8,8 +9,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/java/br/com/automacao/Simulador.feature", // feature que será rodada através desse Runner
-		glue = "br.com.automacao", // caminho para encontrar os arquivos de steps correspondentes
+		features = "src/test/java/automacao/Simulator.feature", // feature que será rodada através desse Runner
+		glue = "automacao", // caminho para encontrar os arquivos de steps correspondentes
 		tags = {"@funcionais"}, // executa os testes que estão marcados com essa tag
 		plugin =  {"pretty", "html:target/reports/report-html", "json:target/reports/report-json/report.json"},
 		monochrome = true,
@@ -18,6 +19,6 @@ import cucumber.api.junit.Cucumber;
 		strict = false
 		)
 
-public class SimuladorTest {
+public class SimuladorRunner {
 
 }

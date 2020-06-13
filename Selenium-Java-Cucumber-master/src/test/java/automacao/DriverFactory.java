@@ -1,9 +1,11 @@
-package br.com.automacao.SimuladorTest;
+package automacao;
+
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-public class Driver {
-	
+
+public class DriverFactory {
 	private static WebDriver driver;
 
 	public static WebDriver getDriver() {
@@ -14,10 +16,10 @@ public class Driver {
 	}
 
 	private static void createDriver() {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\ledac\\Test\\Selenium-Java-Cucumber-master\\src\\test\\resources\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
 	public static void killDriver() {
@@ -26,5 +28,4 @@ public class Driver {
 			driver = null;
 		}
 	}
-
 }
