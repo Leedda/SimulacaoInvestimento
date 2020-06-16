@@ -2,11 +2,13 @@ package automacao;
 
 import static org.junit.Assert.assertEquals;
 
+
 import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.BeforeClass;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -49,15 +51,13 @@ public class SimuladorSteps {
 		simulador.preencherCampoTempo(tempo);
 	}
 
-	@When("^acesso o botao simular$")
-	public void acesso_o_botao_simular() throws Throwable {
-		simulador.cliqueBotaoSimular();
-	}
-
+	
 	@Then("^Eu visualizo uma tabela de valores e tempo de investimento \"([^\"]*)\"$")
 	public void eu_visualizo_uma_tabela_de_valores_e_tempo_de_investimento(String obterTexto) throws Throwable {
-	   assertEquals(obterTexto, simulador.getMensagem());
+		simulador.obterTexto(By.className("blocoResultadoSimulacao"));
 	}
+	
+	
 	@After(order = 2, value = { "@funcionais" })
 	public void screenshot(Scenario cenario) {
 
@@ -73,7 +73,8 @@ public class SimuladorSteps {
 	public void fechaBrowser() throws InterruptedException {
 
 		DriverFactory.killDriver();
-		System.out.println("finalizando cen·rio de teste.");
+		System.out.println("finalizando cen√°rio de teste.");
 	}
 
 }
+
